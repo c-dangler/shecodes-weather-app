@@ -30,6 +30,13 @@ h6 {
   text-align: center;
 }
 
+p {
+  font-family: "Playfair Display", Serif;
+  color: #968c83;
+  text-align: center;
+  padding-top: 10px;
+}
+
 .container {
   border: 1px solid gray;
   padding: 0px;
