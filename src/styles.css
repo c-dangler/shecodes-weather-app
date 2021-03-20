@@ -1,0 +1,64 @@
+h1,
+h6 {
+  font-family: "Playfair Display", Serif;
+  font-size: 36px;
+  color: #968c83;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Source Sans Pro", Sans-Serif;
+  color: #968c83;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.container {
+  border: 1px solid gray;
+  padding: 0px;
+  box-shadow: 15px 5px 15px #d6d2c4;
+  border-radius: 5px;
+}
+
+.container .card .card-header {
+  background: #f7dad9;
+  padding-bottom: 10px;
+}
+
+.container .card .card-header {
+  padding-top: 10px;
+}
+
+.container .card .card-body {
+  background: #fff5ea;
+}
+
+.container .card .card-header .row {
+  padding-bottom: 10px;
+}
+
+.weather-icon {
+  text-align: center;
+  font-size: 80px;
+}
+
+.city {
+  text-transform: capitalize;
+}
