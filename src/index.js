@@ -38,7 +38,6 @@ currentTime.innerHTML = now.toLocaleString('en-US', { hour: 'numeric', minute: '
   let displayDate = document.querySelector("h4#current-date");
   displayDate.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear}`;
 
-
   function search(city) {
     let apiKey = "b5a9851944a8a2dbfa9331b8d0e3cd69";
     let units = "imperial";
