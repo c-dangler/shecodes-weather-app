@@ -25,11 +25,6 @@ h4 {
   font-size: 18px;
 }
 
-h6 {
-  font-size: 24px;
-  text-align: center;
-}
-
 p {
   font-family: "Playfair Display", Serif;
   color: #968c83;
@@ -54,6 +49,12 @@ p {
 
 .container .card .card-body {
   background: #fff5ea;
+}
+
+.weather-forecast {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .container .card .card-header .row {
