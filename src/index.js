@@ -52,7 +52,7 @@ currentTime.innerHTML = now.toLocaleString('en-US', { hour: 'numeric', minute: '
   }
   
   function getNewCityWeather(response) {
-    document.querySelector("#city").innerHTML = `${response.data.name}, ${response.data.sys.country}`;
+    document.querySelector("#city").innerHTML = response.data.name;
     document.querySelector("h2#current-temp").innerHTML = `${Math.round(response.data.main.temp)}°`;
     document.querySelector("h2#current-weather").innerHTML = response.data.weather[0].main;
     document.querySelector("h5#current-humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
