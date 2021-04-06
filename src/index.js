@@ -57,6 +57,11 @@ currentTime.innerHTML = now.toLocaleString('en-US', { hour: 'numeric', minute: '
     document.querySelector("h2#current-weather").innerHTML = response.data.weather[0].main;
     document.querySelector("h5#current-humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
     document.querySelector("h5#current-wind").innerHTML = `Wind: ${Math.round(response.data.wind.speed)} mph`;
+    document.querySelector("#main-icon").setAttribute(
+      "src", 
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
+    document.querySelector("#main-icon").setAttribute("alt", response.data.weather[0].main)
   }
   
   let searchCity = document.querySelector("#city-search-bar");
