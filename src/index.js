@@ -38,6 +38,34 @@ currentTime.innerHTML = now.toLocaleString('en-US', { hour: 'numeric', minute: '
   let displayDate = document.querySelector("h4#current-date");
   displayDate.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear}`;
 
+  function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+
+    let forecastHTML = "";
+    forecastHTML = forecastHTML + `
+        <div class="row">
+          <div class="col-2">
+            <h6 class="forecast-weather-date" id="forecast">
+              Sunday
+            </h6>
+            <img src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt=""
+            width="40">
+            <h6 class="weather-forecast-temperature">
+             <span class="weather-forecast-max">
+              36°</span>/ 
+              <span class="weatherforecast-min">
+              22°</span>
+            </h6>
+          </div>
+        </div>
+        `;
+    
+    forecastElement.innerHTML = forecastHTML;
+
+  }
+
+
   function search(city) {
     let apiKey = "b5a9851944a8a2dbfa9331b8d0e3cd69";
     let units = "imperial";
@@ -111,3 +139,4 @@ currentTime.innerHTML = now.toLocaleString('en-US', { hour: 'numeric', minute: '
   fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
   
   search("New York");
+  displayForecast();

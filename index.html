@@ -19,17 +19,19 @@
     <div class="card">
       <div class="card-header">
         <div class="row">
-          <div class="col-6">
+          <div class="col">
             <h1 id="current-time"></h1>
               <h1 id="city"></h1>
               <h1 id="current-weather"></h1>
           </div>
-          <div class="col-6 text-end">
+          <div class="col text-end">
             <form id="city-search-bar">
               <input 
               type="search" id="city-search-input" 
               placeholder="Search new city..."
               autocomplete="off">
+            </div>
+              <div class="col text-end">
               <input class="btn btn-primary btn-sm" type="submit" id="submit-button">
               <button type="button" class="btn btn-success btn-sm" id="current-location">Current Location</button>
             <h4 id="current-date"></h4>
@@ -60,23 +62,7 @@
           </div>
         </div>
       </div>
-      <div class="card-body weather-forecast">
-        <div class="row">
-          <div class="col-2">
-            <h6 class="forecast-weather-date">
-              Sunday
-            </h6>
-            <img src="http://openweathermap.org/img/wn/10d@2x.png"
-            alt=""
-            width="40">
-            <h6 class="weather-forecast-temperature">
-             <span class="weather-forecast-max">
-              36°</span>/ 
-              <span class="weatherforecast-min">
-              22°</span>
-            </h6>
-          </div>
-        </div>
+      <div class="card-body weather-forecast"  id="forecast">
       </div>
     </div>
   </div>
