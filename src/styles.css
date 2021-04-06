@@ -24,6 +24,7 @@ h3 {
 h4,
 h6 {
   font-size: 18px;
+  color: #68615c;
 }
 
 p {
@@ -43,7 +44,7 @@ p {
 }
 
 .container .card .card-header {
-  background: #f7dad9;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
   padding-top: 10px;
   padding-bottom: 0px;
 }
@@ -55,10 +56,6 @@ button {
 
 .current-forecast {
   text-align: right;
-}
-
-.container .card .card-body {
-  background: #fff5ea;
 }
 
 .weather-forecast {
@@ -80,22 +77,6 @@ button {
   text-transform: capitalize;
 }
 
-.units {
-  font-family: "Source Sans Pro", Sans-Serif;
-  color: #968c83;
-}
-
-.active {
-  color: #968c83;
-  cursor: default;
-  text-decoration: none;
-}
-
-.active:hover {
-  text-decoration: none;
-  color: #968c83;
-}
-
 .weather-forecast-min {
-  opacity: 0.6;
+  opacity: 0.7;
 }
