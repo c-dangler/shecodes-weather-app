@@ -105,7 +105,7 @@ currentTime.innerHTML = now.toLocaleString('en-US', { hour: 'numeric', minute: '
   
   function getNewCityWeather(response) {
     document.querySelector("#city").innerHTML = response.data.name;
-    document.querySelector("h2#current-temp").innerHTML = `${Math.round(response.data.main.temp)}°`;
+    document.querySelector("h2#current-temp").innerHTML = `${Math.round(response.data.main.temp)}°F`;
     document.querySelector("h1#current-weather").innerHTML = response.data.weather[0].main;
     document.querySelector("h5#current-humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
     document.querySelector("h5#current-wind").innerHTML = `Wind: ${Math.round(response.data.wind.speed)} mph`;
@@ -135,34 +135,8 @@ currentTime.innerHTML = now.toLocaleString('en-US', { hour: 'numeric', minute: '
     axios.get(apiUrl).then(getNewCityWeather);
     }
   }
-
-   function displayCelsiusTemperature(event) {
-    event.preventDefault();
-    fahrenheitLink.classList.remove("active");
-    celsiusLink.classList.add("active");
-    let celsiusTemperature = (fahrenheitTemperature - 32) * 5/9;
-    let temperatureElement = document.querySelector("#current-temp");
-    temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°`;
-  }
-
-  function displayFahrenheitTemperature(event) {
-    event.preventDefault();
-    fahrenheitLink.classList.add("active");
-    celsiusLink.classList.remove("active");
-    let temperatureElement = document.querySelector("#current-temp");
-    temperatureElement.innerHTML = `${Math.round(fahrenheitTemperature)}°`;
-  }
-
-  
-  let fahrenheitTemperature = null;
   
   let currentLocationButton = document.querySelector("#current-location");
   currentLocationButton.addEventListener("click", currentCityWeather);
-  
-  let celsiusLink = document.querySelector("#celsius-link");
-  celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
-  let fahrenheitLink = document.querySelector("#fahrenheit-link");
-  fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
   
   search("New York");

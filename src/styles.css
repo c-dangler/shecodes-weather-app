@@ -44,8 +44,8 @@ p {
 
 .container .card .card-header {
   background: #f7dad9;
-  padding-bottom: 10px;
   padding-top: 10px;
+  padding-bottom: 0px;
 }
 
 input,
