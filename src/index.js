@@ -41,12 +41,15 @@ currentTime.innerHTML = now.toLocaleString('en-US', { hour: 'numeric', minute: '
   function displayForecast() {
     let forecastElement = document.querySelector("#forecast");
 
-    let forecastHTML = "";
-    forecastHTML = forecastHTML + `
-        <div class="row">
+    let forecastHTML = `<div class="row">`;
+    let days = ["Thu", "Fri", "Sat"];
+    days.forEach(function(day) {
+    forecastHTML = 
+      forecastHTML + 
+        `
           <div class="col-2">
             <h6 class="forecast-weather-date" id="forecast">
-              Sunday
+              ${day}
             </h6>
             <img src="http://openweathermap.org/img/wn/10d@2x.png"
             alt=""
@@ -57,12 +60,11 @@ currentTime.innerHTML = now.toLocaleString('en-US', { hour: 'numeric', minute: '
               <span class="weatherforecast-min">
               22°</span>
             </h6>
-          </div>
-        </div>
         `;
     
+    forecastHTML = forecastHTML + `</div>`;
     forecastElement.innerHTML = forecastHTML;
-
+    });
   }
 
 
