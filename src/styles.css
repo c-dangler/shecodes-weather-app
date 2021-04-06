@@ -68,3 +68,19 @@ p {
 .city {
   text-transform: capitalize;
 }
+
+.units {
+  font-family: "Source Sans Pro", Sans-Serif;
+  color: #968c83;
+}
+
+.active {
+  color: #968c83;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: #968c83;
+}
