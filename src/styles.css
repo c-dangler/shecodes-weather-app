@@ -47,6 +47,10 @@ p {
   padding-top: 10px;
 }
 
+.current-forecast {
+  text-align: right;
+}
+
 .container .card .card-body {
   background: #fff5ea;
 }
