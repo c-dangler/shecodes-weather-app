@@ -1,5 +1,4 @@
-h1,
-h6 {
+h1 {
   font-family: "Playfair Display", Serif;
   font-size: 24px;
   color: #968c83;
@@ -8,7 +7,8 @@ h6 {
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-family: "Source Sans Pro", Sans-Serif;
   color: #968c83;
 }
@@ -21,7 +21,8 @@ h3 {
   font-size: 26px;
 }
 
-h4 {
+h4,
+h6 {
   font-size: 18px;
 }
 
@@ -93,4 +94,8 @@ button {
 .active:hover {
   text-decoration: none;
   color: #968c83;
+}
+
+.weather-forecast-min {
+  opacity: 0.6;
 }
