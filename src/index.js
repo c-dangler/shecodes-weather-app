@@ -38,7 +38,8 @@ currentTime.innerHTML = now.toLocaleString('en-US', { hour: 'numeric', minute: '
   let displayDate = document.querySelector("h4#current-date");
   displayDate.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear}`;
 
-  function displayForecast() {
+  function displayForecast(response) {
+    console.log(response.data.daily);
     let forecastElement = document.querySelector("#forecast");
 
     let forecastHTML = `<div class="row">`;
@@ -65,6 +66,12 @@ currentTime.innerHTML = now.toLocaleString('en-US', { hour: 'numeric', minute: '
     forecastHTML = forecastHTML + `</div>`;
     forecastElement.innerHTML = forecastHTML;
     });
+  }
+
+  function getForecast(coordinates) {
+    let apiKey = "b5a9851944a8a2dbfa9331b8d0e3cd69";
+    let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+    axios.get(apiURL).then(displayForecast)
   }
 
 
@@ -94,6 +101,9 @@ currentTime.innerHTML = now.toLocaleString('en-US', { hour: 'numeric', minute: '
     document.querySelector("#main-icon").setAttribute("alt", response.data.weather[0].main)
     
     fahrenheitTemperature = response.data.main.temp;
+    
+    getForecast(response.data.coord)
+    
   }
   
   let searchCity = document.querySelector("#city-search-bar");
@@ -141,4 +151,3 @@ currentTime.innerHTML = now.toLocaleString('en-US', { hour: 'numeric', minute: '
   fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
   
   search("New York");
-  displayForecast();
